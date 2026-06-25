@@ -1,9 +1,11 @@
-import React from "react";
+'use client'
+
+import React, { useState, useEffect } from "react";
 
 interface Student {
   firstName: string;
   lastName: string;
-  dateOfBirth: string;
+  dob: string;
   grade: number;
 }
 
@@ -21,7 +23,7 @@ const StudentList = ({ students }: StudentListProps) => {
           <p>
             {students.firstName} {students.lastName}
           </p>
-          <p>Date of Birth: {students.dateOfBirth}</p>
+          <p>Date of Birth: {students.dob}</p>
           <p>Grade: {students.grade}</p>
         </div>
       ))}
