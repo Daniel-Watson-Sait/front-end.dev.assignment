@@ -1,5 +1,23 @@
+/** 
+ * Names: Daniel Watson, Echo Salonga, Daniel Tollis
+ * Date: June 26, 2026
+ * Description:
+ * - Displays a list of students with all information.
+ * 
+ * Inputs:
+ * Receives an array of students as a prop, requiring first name, last name, date of birth, and grade information.
+ * 
+ * Processing:
+ * - Uses .map() to loop through array for formatting student data.
+ * - TailWind CSS used to create section displaying each student and their info.
+ * 
+ * Outputs:
+ * - Returns a rendered list of all students and their information.
+*/
+
 import React from "react";
 
+// Student List Component //
 interface Student {
   firstName: string;
   lastName: string;
