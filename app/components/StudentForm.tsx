@@ -16,7 +16,7 @@ const StudentForm = ({ onAddStudent }: StudentFormProps) => {
         formState: { errors },
         reset,
     } = useForm<StudentData>({
-        resolver: zodResolver(studentSchema),
+        resolver: zodResolver(studentSchema) as any,
         defaultValues: {
             firstName: "",
             lastName: "",
