@@ -1,5 +1,23 @@
+/** 
+ * Names: Daniel Watson, Echo Salonga, Daniel Tollis
+ * Date: June 26, 2026
+ * Description:
+ * - This component renders a footer section for all pages.
+ * 
+ * Inputs:
+ * - No props needed.
+ * 
+ * Processing:
+ * - Displays static footer containing general info.
+ * - Tailwind CSS used for styling.
+ * 
+ * Outputs:
+ * - Returns a footer at the bottom of every page.
+*/
+
 import React from 'react'
 
+// Footer Component //
 const Footer = () => {
   return (
     <div>

@@ -1,9 +1,28 @@
+/** 
+ * Names: Daniel Watson, Echo Salonga, Daniel Tollis
+ * Date: June 26, 2026
+ * Description:
+ * - This component integrates a form that allows users to add new students to the portal/list.
+ * 
+ * Inputs:
+ * - onAddStudent callback prop used to send added students data to the parent component.
+ * - Receives inputted information for values of first name, last name, date of birth, and grade.
+ * 
+ * Processing:
+ * - Uses react-hook-form with a Zod to validate input fields.
+ * - Passes validated student data to the onAddStudent.
+ *
+ * Outputs:
+ * - Returns form with input fields, add student button, and potential error messages.
+*/
+
 "use client"
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { studentSchema, type StudentData } from "../lib/StudentsSchema";
 
+// Student Form Component //
 type StudentFormProps = {
   onAddStudent: (newStudent: StudentData) => void;
 };
@@ -23,14 +42,12 @@ const StudentForm = ({ onAddStudent }: StudentFormProps) => {
             dateOfBirth: "",
             grade: 1,
         },
-    }
-    );
+    });
+    
     function onSubmit(data: StudentData) {
         onAddStudent(data);
         reset();
     }
-
- 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 border p-4 rounded">
